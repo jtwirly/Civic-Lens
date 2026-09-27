@@ -172,13 +172,13 @@ The underlying legislative parsing and source-grounding components could eventua
 
 ## Images
 
-<img width="992" height="620" alt="Screenshot 2026-09-27 at 5 09 25 AM" src="https://github.com/user-attachments/assets/5b7a2093-4efb-463f-a7a7-a7759ff4e441" />
-<img width="935" height="506" alt="Screenshot 2026-09-27 at 5 10 19 AM" src="https://github.com/user-attachments/assets/aa8a26c2-43b7-4e37-be91-71edc2ab25f9" />
-<img width="906" height="602" alt="Screenshot 2026-09-27 at 5 10 40 AM" src="https://github.com/user-attachments/assets/c6affcca-3bce-4394-b79f-6a92c82244da" />
-<img width="933" height="587" alt="Screenshot 2026-09-27 at 5 10 57 AM" src="https://github.com/user-attachments/assets/27db7d3c-844d-4eba-ba50-34d8cb3dc583" />
-<img width="933" height="605" alt="Screenshot 2026-09-27 at 5 11 11 AM" src="https://github.com/user-attachments/assets/707ca75b-3c93-4123-9e3e-dcc39bd31383" />
-<img width="931" height="593" alt="Screenshot 2026-09-27 at 5 11 27 AM" src="https://github.com/user-attachments/assets/9791edfa-9eac-45cf-937a-baa82b2192e4" />
-<img width="927" height="607" alt="Screenshot 2026-09-27 at 5 12 00 AM" src="https://github.com/user-attachments/assets/69948052-7d60-47d6-a2e2-5bd327f8d335" />
-<img width="926" height="608" alt="Screenshot 2026-09-27 at 5 12 34 AM" src="https://github.com/user-attachments/assets/8063bd7f-961d-41f5-9477-8b4ecf63e616" />
-<img width="924" height="386" alt="Screenshot 2026-09-27 at 5 12 54 AM" src="https://github.com/user-attachments/assets/32fe4909-2470-4a97-93bc-bf4244ed50ea" />
-<img width="924" height="573" alt="Screenshot 2026-09-27 at 5 13 09 AM" src="https://github.com/user-attachments/assets/d3052434-6f3d-41d8-a3f9-840282340e0d" />
+<img width="992" height="620" alt="Screenshot 2026-09-27 at 5 09 25 AM" src="https://github.com/user-attachments/assets/a51d5bd6-0c8e-45c3-82d1-8f3a48505a8e" />
+<img width="935" height="506" alt="Screenshot 2026-09-27 at 5 10 19 AM" src="https://github.com/user-attachments/assets/6ba38660-8912-495c-bb25-71c5d1ee9a08" />
+<img width="906" height="602" alt="Screenshot 2026-09-27 at 5 10 40 AM" src="https://github.com/user-attachments/assets/4e7dc591-8655-487a-9047-483e0dda8abd" />
+<img width="933" height="587" alt="Screenshot 2026-09-27 at 5 10 57 AM" src="https://github.com/user-attachments/assets/84f82903-4ccc-468b-b4b9-6734949f1d79" />
+<img width="933" height="605" alt="Screenshot 2026-09-27 at 5 11 11 AM" src="https://github.com/user-attachments/assets/c7092765-aad9-4108-abc6-d803c943510d" />
+<img width="931" height="593" alt="Screenshot 2026-09-27 at 5 11 27 AM" src="https://github.com/user-attachments/assets/66d70085-506d-4ecb-ac03-063d4112ffe0" />
+<img width="927" height="607" alt="Screenshot 2026-09-27 at 5 12 00 AM" src="https://github.com/user-attachments/assets/1d843142-a24b-4199-a1a3-442397773b2f" />
+<img width="926" height="608" alt="Screenshot 2026-09-27 at 5 12 34 AM" src="https://github.com/user-attachments/assets/03be9be5-ff0f-49c5-b86d-ebf244a58356" />
+<img width="924" height="386" alt="Screenshot 2026-09-27 at 5 12 54 AM" src="https://github.com/user-attachments/assets/1694aad7-5079-4f9f-81f9-ff381aef5d63" />
+<img width="924" height="573" alt="Screenshot 2026-09-27 at 5 13 09 AM" src="https://github.com/user-attachments/assets/c001b21c-cf87-4747-9e69-7b267be2847a" />
