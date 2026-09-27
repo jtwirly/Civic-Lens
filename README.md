@@ -1,0 +1,184 @@
+# Civic Lens
+Civic Lens connects the dots between legislation and the people it affects: understand the bill, see what it means for you, and engage the government responsible for it.
+
+## Inspiration
+
+Government makes decisions through documents that are often extremely difficult for the people affected by them to understand. Federal legislation can contain hundreds of pages of amendments, cross-references, definitions, and statutory language that assumes substantial legal knowledge.
+
+For a citizen, small-business owner, or community advocate, that creates three barriers:
+
+- **Understanding:** What does this bill actually change?
+- **Personal relevance:** Does it affect me, my family, my organization, or my business?
+- **Participation:** If I have a concern, where is the bill in the legislative process, who represents me, and how can I communicate that concern to government?
+
+We wanted to build something that does more than display government information. **Civic Lens closes the loop between legislation and civic participation:** it turns statutory text into plain-language explanations, connects those provisions to a person's specific concern, grounds the explanation in the underlying parliamentary text, and helps the person take the next step with government.
+
+The goal is not to tell citizens what position to take. It is to make the information and procedures of government understandable enough that people can participate in them.
+
+## What it does
+
+**Civic Lens** turns complex Canadian legislation and parliamentary information into something people can understand, investigate, and act on through a connected civic workflow.
+
+### 1. Understand the legislation
+
+**Plain-Language Legal Deconstruction:**  
+The system translates complex Canadian legislation into accessible explanations while preserving the underlying legal structure.
+
+**Before vs. After:**  
+For amending legislation, Civic Lens shows how relevant provisions change from the existing statutory framework to the proposed framework, making legislative amendments easier to understand.
+
+**Source Citations:**  
+Substantive explanations are linked to specific statutory provisions. A citation can be opened to show the underlying parliamentary text rather than asking the user to simply trust an AI-generated explanation.
+
+### 2. Connect legislation to the broader parliamentary record
+
+Civic Lens integrates information from **Parliament of Canada's legislative records, OpenParliament, and A2AJ's legal research infrastructure**.
+
+This lets the project connect different layers of Canadian public information:
+
+**Legislation → Parliamentary activity → Legal decisions → Civic action**
+
+Rather than treating a bill as an isolated document, Civic Lens can place it within the broader ecosystem of parliamentary debate, representatives, committees, and emerging legal issues.
+
+### 3. Ask: “What does this mean for me?”
+
+**Citizen Concern Tracer:**  
+A person can describe their situation or question in ordinary language—for example:
+
+> “I run a five-person web agency. Would this bill create new obligations for us if we deploy AI tools?”
+
+Civic Lens identifies the provisions relevant to that concern and explains how they relate to the person's situation, including relevant obligations, protections, and unresolved policy questions.
+
+### 4. Connect people back to government
+
+**Riding & MP Matcher:**  
+A Canadian postal code can be used to identify the relevant federal electoral district and Member of Parliament, including available parliamentary contact and committee information.
+
+**Parliamentary Letter & Brief Generator:**  
+Civic Lens can turn a citizen's concern into a concise constituent letter or a structured parliamentary committee brief, which the user can review and copy for submission.
+
+This creates a direct civic pathway:
+
+**Legislation → Understanding → Personal relevance → Government**
+
+### 5. Explore beyond the built-in examples
+
+**Custom Bill & Regulatory Ingestion:**  
+Users can provide other legislative or policy text and run it through the same structured analysis workflow.
+
+---
+
+## How we built it
+
+We built an end-to-end civic-tech architecture that combines **legislative parsing, parliamentary data, legal research data, source-grounded generative AI, and civic-action infrastructure.**
+
+### Legislative Document Ingestion
+
+Legislative text is converted into structured representations of Acts, Parts, Sections, Subsections, and other statutory elements rather than being treated as one large block of text.
+
+The system works with Canadian parliamentary and legislative sources, including **Parliament of Canada records and OpenParliament**, to connect legislative text with the surrounding parliamentary process.
+
+### Legal Research Integration
+
+Civic Lens also integrates with **A2AJ**, allowing the legislative analysis to connect with Canadian legal research and case-law information.
+
+This creates an important bridge between:
+
+**What Parliament is proposing → What Parliament is debating → What courts have considered**
+
+### Statutory Delta & Entity Graph
+
+Canadian bills frequently amend existing legislation through formulas such as:
+
+> “Subsection 14(1) of the Act is replaced by the following...”
+
+Our system parses these amendment instructions and constructs relationships between provisions so that relevant **before-and-after** changes can be surfaced.
+
+### Source-Grounded AI
+
+We use the Google GenAI SDK and Gemini models to generate accessible explanations from the structured legislative data.
+
+The model is constrained by structured output requirements: substantive generated claims must be associated with an exact quotation and statutory clause anchor. If an explanation cannot be grounded in the available source material, the system does not treat it as a verified statutory claim.
+
+This was an important design decision: **AI handles language transformation and reasoning over structured information; the underlying government and legal sources remain the source of truth.**
+
+### Civic Action & Parliamentary Mapping
+
+We built mappings between Canadian federal electoral districts, postal-code prefixes, Members of Parliament, and parliamentary committees to connect legislative information to the relevant democratic institutions.
+
+---
+
+## Accomplishments we're proud of
+
+### We connected multiple layers of Canada's civic information ecosystem
+
+Civic Lens brings together information that normally lives in separate systems:
+
+**Legislation + parliamentary activity + legal research + representatives + civic action**
+
+By integrating Parliament, OpenParliament, and A2AJ alongside our own legislative parsing and civic-action layers, we can move beyond a simple bill summarizer toward a connected civic research and participation tool.
+
+### We built a complete people-to-government workflow
+
+Rather than stopping at “summarize this bill,” Civic Lens connects:
+
+**Raw legislation → Parliamentary context → Plain-language explanation → Personal concern → Legal context → Representative → Civic communication**
+
+That is the core civic interaction we set out to build.
+
+### We made AI explanations traceable
+
+Our system is designed so that users can move from an explanation back to the underlying legislative provision instead of treating an AI response as an unexplained authority.
+
+### We designed for trust
+
+The interface deliberately avoids common AI-product patterns that can make generated information feel authoritative without making its provenance clear. Source text, statutory structure, and the distinction between explanation and underlying law are central to the experience.
+
+## What we learned
+
+### In civic technology, provenance matters
+
+Our biggest lesson was that making AI more creative is not necessarily the goal. For legislation, **traceability can be more valuable than fluency**. Users need to be able to see where an explanation came from.
+
+### The barrier to participation is often procedural friction
+
+People may care about a government decision but still not know where to start. Connecting a personal concern to a specific provision, representative, committee, or communication format can remove several procedural barriers at once.
+
+### Legislative text benefits from a “diff” mental model
+
+Software developers routinely understand change through diffs. Applying a similar concept to legislation makes the structure of amendments easier to reason about than presenting hundreds of pages as a single document.
+
+### AI works better when it is given a constrained job
+
+Instead of asking an LLM to “understand Canadian law,” we separated the problem into structured document parsing, legislative comparison, source retrieval, and language generation. This made the AI component more controllable and gave us clearer failure modes.
+
+## What's next for Civic Lens
+
+### Track what happens after citizens participate
+
+A future **“What Happened to My Feedback?”** feature would follow committee reports, amendments, and parliamentary debate to show citizens what happened to issues they raised.
+
+### Expand beyond Parliament
+
+The same architecture could support provincial legislation, municipal bylaws, and other public decision-making processes, particularly in areas such as housing, zoning, transportation, and environmental regulation.
+
+### Full bilingual federal support
+
+We would extend the legislative ingestion and comparison pipeline to support English/French statutory alignment throughout the federal workflow.
+
+### Open Civic Infrastructure
+
+The underlying legislative parsing and source-grounding components could eventually become an open API for journalists, legal clinics, civil-society organizations, researchers, and other civic-technology developers.
+
+## Images
+
+<img width="992" height="620" alt="Screenshot 2026-09-27 at 5 09 25 AM" src="https://github.com/user-attachments/assets/5b7a2093-4efb-463f-a7a7-a7759ff4e441" />
+<img width="935" height="506" alt="Screenshot 2026-09-27 at 5 10 19 AM" src="https://github.com/user-attachments/assets/aa8a26c2-43b7-4e37-be91-71edc2ab25f9" />
+<img width="906" height="602" alt="Screenshot 2026-09-27 at 5 10 40 AM" src="https://github.com/user-attachments/assets/c6affcca-3bce-4394-b79f-6a92c82244da" />
+<img width="933" height="587" alt="Screenshot 2026-09-27 at 5 10 57 AM" src="https://github.com/user-attachments/assets/27db7d3c-844d-4eba-ba50-34d8cb3dc583" />
+<img width="933" height="605" alt="Screenshot 2026-09-27 at 5 11 11 AM" src="https://github.com/user-attachments/assets/707ca75b-3c93-4123-9e3e-dcc39bd31383" />
+<img width="931" height="593" alt="Screenshot 2026-09-27 at 5 11 27 AM" src="https://github.com/user-attachments/assets/9791edfa-9eac-45cf-937a-baa82b2192e4" />
+<img width="927" height="607" alt="Screenshot 2026-09-27 at 5 12 00 AM" src="https://github.com/user-attachments/assets/69948052-7d60-47d6-a2e2-5bd327f8d335" />
+<img width="926" height="608" alt="Screenshot 2026-09-27 at 5 12 34 AM" src="https://github.com/user-attachments/assets/8063bd7f-961d-41f5-9477-8b4ecf63e616" />
+<img width="924" height="386" alt="Screenshot 2026-09-27 at 5 12 54 AM" src="https://github.com/user-attachments/assets/32fe4909-2470-4a97-93bc-bf4244ed50ea" />
+<img width="924" height="573" alt="Screenshot 2026-09-27 at 5 13 09 AM" src="https://github.com/user-attachments/assets/d3052434-6f3d-41d8-a3f9-840282340e0d" />
