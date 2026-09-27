@@ -1,0 +1,8 @@
+{
+  "name": "Remix Civic Lens - Bill to Me",
+  "description": "Turn government legislation into plain-English understanding, source-grounded impact analysis, and direct civic action with your representatives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
