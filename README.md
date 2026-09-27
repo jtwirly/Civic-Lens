@@ -74,6 +74,8 @@ Users can provide other legislative or policy text and run it through the same s
 
 We built an end-to-end civic-tech architecture that combines **legislative parsing, parliamentary data, legal research data, source-grounded generative AI, and civic-action infrastructure.**
 
+The tech stack is: React · TypeScript · Gemini · Google GenAI SDK
+
 ### Legislative Document Ingestion
 
 Legislative text is converted into structured representations of Acts, Parts, Sections, Subsections, and other statutory elements rather than being treated as one large block of text.
@@ -109,6 +111,20 @@ This was an important design decision: **AI handles language transformation and 
 We built mappings between Canadian federal electoral districts, postal-code prefixes, Members of Parliament, and parliamentary committees to connect legislative information to the relevant democratic institutions.
 
 ---
+
+## Challenges we ran into
+
+### Making AI legally traceable
+A generic LLM can produce plausible-sounding but incorrect legal citations. In a civic application, that is particularly dangerous because users may rely on an explanation when making decisions or communicating with government.
+We addressed this by constraining the synthesis process to our structured legislative representation and requiring generated substantive claims to carry source anchors.
+
+### Reconstructing legislative amendments
+Canadian legislation often describes changes as instructions to modify another statute rather than presenting the resulting law as a continuous narrative.
+Understanding a provision therefore requires more than summarizing the bill. We had to reason about the relationship between the existing provision and the proposed amendment, which led us to model legislative changes more like a version-control diff than a conventional document summary.
+
+### Keeping civic participation non-partisan
+We wanted Civic Lens to make participation easier without telling users what political position they should adopt.
+For contested provisions, the system therefore focuses on presenting the relevant arguments, evidence, and parliamentary debate rather than assigning a political conclusion to the user.
 
 ## Accomplishments we're proud of
 
