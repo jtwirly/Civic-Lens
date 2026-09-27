@@ -3,6 +3,8 @@ Civic Lens connects the dots between legislation and the people it affects: unde
 
 Prototype: https://remix-civic-lens-bill-to-me-5612.ai.studio 
 
+<div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allow="clipboard-write" allowfullscreen style="position:absolute; width: 100%; height: 100%;border: solid 1px #333;" src="https://www.beautiful.ai/embed/-P2ZDI5JHJseTshkutLh?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-P2YY6mJE38lVTn9ngzO"></iframe><a href="https://www.beautiful.ai/embed/-P2ZDI5JHJseTshkutLh?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-P2YY6mJE38lVTn9ngzO">View Civic Lens: Infrastructure for Civic Participation on Beautiful.ai</a></div>
+
 ## Inspiration
 
 Government makes decisions through documents that are often extremely difficult for the people affected by them to understand. Federal legislation can contain hundreds of pages of amendments, cross-references, definitions, and statutory language that assumes substantial legal knowledge.
