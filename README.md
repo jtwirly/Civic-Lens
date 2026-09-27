@@ -1,6 +1,8 @@
 # Civic Lens
 Civic Lens connects the dots between legislation and the people it affects: understand the bill, see what it means for you, and engage the government responsible for it.
 
+Prototype: https://remix-civic-lens-bill-to-me-5612.ai.studio 
+
 ## Inspiration
 
 Government makes decisions through documents that are often extremely difficult for the people affected by them to understand. Federal legislation can contain hundreds of pages of amendments, cross-references, definitions, and statutory language that assumes substantial legal knowledge.
